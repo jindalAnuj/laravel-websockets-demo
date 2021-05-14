@@ -10,7 +10,7 @@ class ChatsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     public function index()
@@ -20,7 +20,8 @@ class ChatsController extends Controller
 
     public function fetchMessages()
     {
-        return Message::with('user')->get();
+        // return Message::with('user')->get();
+        return Message::get();
     }
 
     public function sendMessage(Request $request)

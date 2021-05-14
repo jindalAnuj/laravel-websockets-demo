@@ -13,6 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// NOTE authentication uncomented by @JindalAnuj
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+// first sample api 
+Route::get('loc2', 'LocationTrackingController@index');
+
+// api for socket implementation
+// Route::get('location', 'LocationTrackingController@fetchLocation');
+Route::post('location', 'LocationTrackingController@addLocation');
